@@ -231,7 +231,7 @@ named!(parse_position<&[u8], OutputArg>, do_parse!(
 	tag!("position")
 	>> parse_space
 	>> x: parse_i32
-	>> tag!(",")
+	>> tag!(" ")
 	>> y: parse_i32
 	>> (OutputArg::Position(x, y))
 ));
